@@ -1,0 +1,27 @@
+#skills {
+    background-image: linear-gradient(#3EAAA2, #496AA4);
+    padding: 45px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.skills h1, .skills .card {
+    padding-left: 15px;
+}
+
+.skills .card {
+    margin-bottom: 20px;
+}
+
+.frontEnd, .backEnd, .javaScript, .other{
+    width: 100%;
+}
+
+.display-5, .skills p {
+    margin-bottom: 0px !important;
+}
+
+.skills img {
+    width: auto;
+    height: 100px;
+}

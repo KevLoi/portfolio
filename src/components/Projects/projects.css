@@ -1,0 +1,72 @@
+#projects {
+    background-image: linear-gradient(#5ED0A5, #3EAAA2);
+    padding: 45px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.projects h1 {
+    padding-left: 15px;
+}
+
+#projects .card {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+  
+/* Flip Cards CSS */
+#projects .card-container {
+    display: grid;
+    perspective: 700px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+#projects .card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+#projects .card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+#projects .front {
+    grid-area: frontAndBack;
+}
+
+#projects .back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+#projects .card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+#projects .card-title {
+    padding: 20px 10px 0px 10px;
+}
+
+#projects .card-text {
+    padding: 0px 10px 15px 10px;
+}
+
+#projects .card-header {
+    padding: 10px 10px 10px 10px !important;
+    margin-bottom: 10px !important;
+}
+
+#projects .card-header h4 {
+    margin-bottom: 0px !important;
+}
+
+#projects a {
+    margin-left: 10px !important;
+    margi-bottom: 10px;
+}
