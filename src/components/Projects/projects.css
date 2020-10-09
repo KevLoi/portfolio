@@ -1,72 +1,59 @@
 #projects {
-    background-image: linear-gradient(#5ED0A5, #3EAAA2);
-    padding: 45px 0px;
+    /* background-image: linear-gradient(#5ED0A5, #3EAAA2); */
+    padding: 45px 0px 150px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
 
-.projects h1 {
-    padding-left: 15px;
+#pTitle, #acs, #sankey, #tt, #tss, #browsr {
+    opacity: 0;
+    transition: 1s;
 }
 
-#projects .card {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-  
-/* Flip Cards CSS */
-#projects .card-container {
-    display: grid;
-    perspective: 700px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    
+.visible {
+    opacity: 1 !important;
+    transition: 1s;
+    margin-top: 20px !important;
 }
 
-#projects .card-flip {
-    display: grid;
-    grid-template: 1fr / 1fr;
-    grid-template-areas: "frontAndBack";
-    transform-style: preserve-3d;
-    transition: all 0.7s ease;
+.image-wrap {
+    position: relative;
+    width: 300px;
+    height: 193px;
+    margin-top: 30px;
 }
 
-#projects .card-flip div {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+.projectDescription {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(223deg, rgba(32,32,32,1) 0%, rgba(105,105,105,0.9500175070028011) 53%, rgba(32,32,32,1) 100%);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+
+    /* transition effect. not necessary */
+    transition: opacity .3s;
 }
 
-#projects .front {
-    grid-area: frontAndBack;
+.margin-top-10 {
+    margin-top: 10px !important;
 }
 
-#projects .back {
-    grid-area: frontAndBack;
-    transform: rotateY(-180deg);
+img:hover + .projectDescription, .projectDescription:hover {
+    width: 300px;
+    height: 194px;
+    visibility: visible;
+    opacity: 1;
 }
 
-#projects .card-container:hover .card-flip {
-    transform: rotateY(180deg);
+#projects img {
+    width: 300px !important;
+    height: 193px !important;
 }
 
-#projects .card-title {
-    padding: 20px 10px 0px 10px;
-}
-
-#projects .card-text {
-    padding: 0px 10px 15px 10px;
-}
-
-#projects .card-header {
-    padding: 10px 10px 10px 10px !important;
-    margin-bottom: 10px !important;
-}
-
-#projects .card-header h4 {
-    margin-bottom: 0px !important;
-}
-
-#projects a {
-    margin-left: 10px !important;
-    margi-bottom: 10px;
+.margin-top-30 {
+    margin-top: 30px !important;
 }

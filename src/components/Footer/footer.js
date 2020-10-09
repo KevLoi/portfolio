@@ -3,40 +3,37 @@ import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Fab from '@material-ui/core/Fab';
 import Resume from '../../KevinLoiResume.pdf';
+import Paper from '@material-ui/core/Paper';
 
 const footer = () => {
 
     return (
-        <div className="footer" id="footer">
+        <div className="footer bg-dark" id="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-12">
-                        <h1 className="display-3"><strong>Learn More</strong></h1>
-                    </div>
+                    <Paper elevation={8} className="more-msg bg-dark col-12 d-flex align-items-center">
+                        <div className="col-12 text-center white">
+                            <h1>See More!</h1>
+                        </div>
+                    </Paper>
+                    
                 </div>
-                <div className="row">
-                    <div className="col-xs-12">
-                        <div className="col-xs-12" id="link">
-                            <Fab color="inherit" href="https://github.com/kevloi">
-                                <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'github-alt']} size="2x" />
-                            </Fab> 
-                            <a target="_blank" href="https://github.com/kevloi">https://github.com/kevloi</a>   
-                        </div>
-                        <div className="col-xs-12" id="link">
-                            <Fab color="inherit" href="https://www.linkedin.com/in/kevin-loi/">
-                                <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'linkedin-in']} size="2x" />
-                            </Fab> 
-                            <a target="_blank" href="https://www.linkedin.com/in/kevin-loi/">https://www.linkedin.com/in/kevin-loi/</a>   
-                        </div>
-                        <div className="col-xs-12" id="link">
-                            <Fab color="inherit" href={Resume} target="_blank">
-                                <FontAwesomeIcon style={{color: 'black'}} icon={['fas', 'file-alt']} size="2x" />
-                            </Fab> 
-                            <a href={Resume} target="_blank">My Resume</a>   
-                        </div>
+                <div className="row d-flex justify-content-around footer-content">
+                    <div className="col text-center" id="link">
+                        <Fab color="inherit" className="fa-icon" href="https://github.com/kevloi">
+                            <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'github-alt']} size="2x" />
+                        </Fab> 
                     </div>
-                    
-                    
+                    <div className="col text-center" id="link">
+                        <Fab color="inherit" className="fa-icon" href="https://www.linkedin.com/in/kevin-loi/">
+                            <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'linkedin-in']} size="2x" />
+                        </Fab> 
+                    </div>
+                    <div className="col text-center" id="link">
+                        <Fab color="inherit" className="fa-icon" href={Resume} target="_blank">
+                            <FontAwesomeIcon style={{color: 'black'}} icon={['fas', 'file-alt']} size="2x" />
+                        </Fab> 
+                    </div>
                 </div>
             </div>
         </div>

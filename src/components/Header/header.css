@@ -1,5 +1,5 @@
 .jumbotron.jumbotron-fluid {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../images/emeraldBay.jpeg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../../images/japanImg.jpeg);
     height: 100vh;
     width: 100%;
 	color: black;
@@ -18,7 +18,7 @@
     background-color: #2E408C;
 }
 
-.row.justify-content-end {
+.row.justify-content-start {
     padding: 150px 0px;
     font-family: "Courier New", Monospace;
     position: relative;

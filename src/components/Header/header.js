@@ -6,7 +6,7 @@ const header = () => {
         <div className="header" id="header">
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">
-                    <div className="row justify-content-end">
+                    <div className="row justify-content-start">
                         <div className="col-md-6 text-center" style={{color: 'white'}}>
                             <h1 className="display-1" >Kevin Loi</h1>
                             <p className="lead">UI/UX Developer @ Murj</p>

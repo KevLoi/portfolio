@@ -1,131 +1,146 @@
 import React from 'react';
+import classNames from 'classnames';
 import './projects.css';
 import acsSite from '../../images/acsSite.png';
 import sankey from '../../images/sankeyDiagram.png';
 import tipsyTrials from '../../images/tipsyTrials.png';
 import starvingslug from '../../images/StarvingSlug.png';
+import browsr from '../../images/browsr.png';
 
-const projects = () => {
-    return (
-        <div className="projects" id="projects">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-12">
-                        <h1 className="display-3"><strong>Projects</strong></h1>
-                    </div>
-                </div>
-                <div className="row">
-                    <div class="col-lg-3 col-md-6 col-xs-12 card-container">
-                        <div class="card-flip">
-                            {/* <!-- Card 1 Front --> */}
-                            <div class="card bg-dark front">
-                                <img src={acsSite} class="card-img-top img-fluid" />
-                                <div class="card-block">
-                                    <h4 class="card-title">Ameritech</h4>
-                                    <p class="card-text">Web app that allow users can learn about the company, and contact the company regarding any questions or concerns.</p>
-                                </div>
-                            </div>
-                            {/* <!-- End Card 1 Front --> */}
+export default class Projects extends React.Component {
 
-                            {/* <!-- Card 1 Back --> */}
-                            <div class="card bg-dark back">
-                                <div class="card-header">
-                                    <h4>Achievements</h4>
-                                </div>
-                                <div class="card-block">
-                                    <p class="card-text">I used Handlbars.JS for templating, while using Node.JS and Express.JS for building the Web Server. For practice, I also recreated the entire front end as another personal project using React.JS.</p>
-                                    <a href="https://ameritechcomputer.herokuapp.com" role="button" class="btn btn-outline-info" id="ameritechSite" target="_blank">Visit Website</a>
-                                </div>
-                            </div>
-                            {/* <!-- End Card 1 Back --> */}
+    constructor(props) {
+        super(props);
+        this.state = { 
+            showProjectTitle: false,
+            showACS: false,
+            showSankey: false,
+            showTT: false,
+            showTSS: false,
+            showBrowsr: false,
+        };
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll() {
+        this.setState({ scrollHeight: window.scrollY });
+        
+        const pTitle = document.getElementById('pTitle');
+        const pACS = document.getElementById('acs');
+        const pSankey = document.getElementById('sankey');
+        const pTT = document.getElementById('tt');
+        const pTSS = document.getElementById('tss');
+        const pBrowsr = document.getElementById('browsr');
+
+        let pTitleInView = (this.state.scrollHeight + window.innerHeight) > pTitle.offsetTop + 200,
+            pTitleBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pTitle.offsetTop + pTitle.clientHeight - 150),
+            acsInView = (this.state.scrollHeight + window.innerHeight) > pACS.offsetTop + 200,
+            acsBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pACS.offsetTop + pACS.clientHeight - 150),
+            sankeyInView = (this.state.scrollHeight + window.innerHeight) > pSankey.offsetTop + 200,
+            sankeyBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pSankey.offsetTop + pSankey.clientHeight - 150),
+            ttInView = (this.state.scrollHeight + window.innerHeight) > pTT.offsetTop + 200,
+            ttBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pTT.offsetTop + pTT.clientHeight - 150),
+            tssInView = (this.state.scrollHeight + window.innerHeight) > pTSS.offsetTop + 200,
+            tssBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pTSS.offsetTop + pTSS.clientHeight - 150),
+            browsrInView = (this.state.scrollHeight + window.innerHeight) > pBrowsr.offsetTop + 200,
+            browsrBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + pBrowsr.offsetTop + pBrowsr.clientHeight - 150);
+
+        if ( (pTitleInView && pTitleBotInView) ) {
+            this.setState({ showProjectTitle: true });
+        } else {
+            this.setState({ showProjectTitle: false });
+        }
+
+        if ( (acsInView && acsBotInView) ) {
+            this.setState({ showACS: true });
+        } else {
+            this.setState({ showACS: false });
+        }
+
+        if ( (sankeyInView && sankeyBotInView) ) {
+            this.setState({ showSankey: true });
+        } else {
+            this.setState({ showSankey: false });
+        }
+
+        if ( (ttInView && ttBotInView) ) {
+            this.setState({ showTT: true });
+        } else {
+            this.setState({ showTT: false });
+        }
+
+        if ( (tssInView && tssBotInView) ) {
+            this.setState({ showTSS: true });
+        } else {
+            this.setState({ showTSS: false });
+        }
+
+        if ( (browsrInView && browsrBotInView) ) {
+            this.setState({ showBrowsr: true });
+        } else {
+            this.setState({ showBrowsr: false });
+        }
+    }
+
+    render() {
+        return (
+            <div className="projects bg-secondary" id="projects">
+                <div className="container">
+                    <div className={classNames("row", {'visible': this.state.showProjectTitle})} id="pTitle">
+                        <div className="col-12 text-center">
+                            <h1 className="display-3"><strong>Projects</strong></h1>
                         </div>
                     </div>
-                    {/* <!-- End Card 1 --> */}
-
-                    <div class="col-lg-3 col-md-6 col-xs-12 card-container">
-                        <div class="card-flip">
-                            {/* <!-- Card 2 Front --> */}
-                            <div class="card bg-dark front">
-                                <img src={sankey} class="card-img-top img-fluid" />
-                                <div class="card-block">
-                                    <h4 class="card-title">Effects</h4>
-                                    <p class="card-text">Web app that uses a sankey diagram to inform users of emotional and medical effects of Santa Cruz based cannabis strains.</p>
+                    <div className="row">
+                        <div className="d-flex flex-wrap justify-content-around text-center">
+                            <div className={classNames("col image-wrap", {'visible': this.state.showACS})} id="acs">
+                                <img src={acsSite} className="rounded mx-auto" alt="..." />
+                                <div className="projectDescription mx-auto">
+                                    <p className="margin-top-10">Web application that allow users to learn about Ameritech Computer Services, a service company in San Francisco.</p>
+                                    <a href="https://ameritechcomputer.herokuapp.com" role="button" className="btn btn-outline-info" id="ameritechSite" target="_blank">Visit Website</a>
                                 </div>
                             </div>
-                            {/* <!-- End Card 2 Front --> */}
-
-                            {/* <!-- Card 1 Back --> */}
-                            <div class="card bg-dark back">
-                                <div class="card-header">
-                                    <h4>Achievements</h4>
+                            <div className={classNames("col image-wrap", {'visible': this.state.showSankey})} id="sankey">
+                                <img src={sankey} className="rounded mx-auto" alt="..." />
+                                <div className="projectDescription mx-auto">
+                                    <p className="margin-top-10">Web application that uses a sankey diagram to inform users of emotional and medical effects of Santa Cruz based cannabis strains.</p>
+                                    <a href="https://shihwesley.github.io/CMPS165-Final-Presentation/index.html" role="button" className="btn btn-outline-info" id="tssSite" target="_blank">Visit Website</a>
                                 </div>
-                                <div class="card-block">
-                                    <p class="card-text">A team of 4 that built the website using HTML, CSS, JavaScript, and D3.js. I web scraped for data, styled the page, cited our sources, made nodes clickable, and highlighted links that correspond to selected nodes.</p>
-                                    <a href="https://shihwesley.github.io/CMPS165-Final-Presentation/index.html" role="button" class="btn btn-outline-info" id="tssSite" target="_blank">Visit Website</a>
-                                </div>
+                                
                             </div>
-                            {/* <!-- End Card 2 Back --> */}
-                        </div>
-                    </div>
-                    {/* <!-- End Card 2 --> */}
-
-                    <div class="col-lg-3 col-md-6 col-xs-12 card-container">
-                        <div class="card-flip">
-                            {/* <!-- Card 3 Front --> */}
-                            <div class="card bg-dark front">
-                                <img src={tipsyTrials} class="card-img-top img-fluid" />
-                                <div class="card-block">
-                                    <h4 class="card-title">Tipsy Trials</h4>
-                                    <p class="card-text">iOS application that allow users to test their cognitive skills with a series of games while under the influence. </p>
-                                </div>
-                            </div>
-                            {/* <!-- End Card 3 Front --> */}
-
-                            {/* <!-- Card 3 Back --> */}
-                            <div class="card bg-dark back">
-                                <div class="card-header">
-                                    <h4>Achievements</h4>
-                                </div>
-                                <div class="card-block">
-                                    <p class="card-text">A team of 5 that built this iOS application using Xcode 9 and Swift 4. I implemented and wrote scripts to read and write data from/to the Firebase Database, created the profile page and the timer as the user's score.</p>
+                            <div className={classNames("col image-wrap", {'visible': this.state.showTT})} id="tt">
+                                <img src={tipsyTrials} className="rounded mx-auto" alt="..." />
+                                <div className="projectDescription mx-auto">
+                                    <p className="margin-top-10">iOS application that allow users to test their cognitive skills with a series of games while under the influence.</p>
                                     <a href="https://bitbucket.org/xdiaz1996/tipsy-ios/src/master/" role="button" className="btn btn-outline-info" target="_blank">Visit Website</a>
                                 </div>
                             </div>
-                            {/* <!-- End Card 3 Back --> */}
-                        </div>
-                    </div>
-                    {/* <!-- End Card 3 --> */}
-
-                    <div class="col-lg-3 col-md-6 col-xs-12 card-container">
-                        <div class="card-flip">
-                            {/* <!-- Card 4 Front --> */}
-                            <div class="card bg-dark front">
-                                <img src={starvingslug} class="card-img-top img-fluid" />
-                                <div class="card-block">
-                                    <h4 class="card-title">Starving Slug</h4>
-                                    <p class="card-text">Web app that allow users to share and delete recipes. Users can also search, comment on, and rate others' recipes.</p>
-                                </div>
-                            </div>
-                            {/* <!-- End Card 4 Front --> */}
-
-                            {/* <!-- Card 4 Back --> */}
-                            <div className="card bg-dark back">
-                                <div className="card-header">
-                                    <h4>Achievements</h4>
-                                </div>
-                                <div className="card-block">
-                                    <p className="card-text">A team of 6 that built this web application using MEAN Stack (MongoDB, ExpressJS, Angular5, NodeJS). I contributed by writing Unit Tests, functions, and models for the RESTful API server in NodeJS.</p>
+                            <div className={classNames("col image-wrap", {'visible': this.state.showTSS})} id="tss">
+                                <img src={starvingslug} className="rounded mx-auto" alt="..." />
+                                <div className="projectDescription mx-auto">
+                                    <p className="margin-top-10">Interactive web application that allow users to share and delete recipes. Users can also search, comment on, and rate others' recipes.</p>
                                     <a href="https://github.com/starving-slug" role="button" className="btn btn-outline-info" target="_blank">Visit Website</a>
                                 </div>
                             </div>
-                            {/* <!-- End Card 4 Back --> */}
+                            <div className={classNames("col image-wrap", {'visible': this.state.showBrowsr})} id="browsr">
+                                <img src={browsr} className="rounded mx-auto" alt="..." />
+                                <div className="projectDescription mx-auto">
+                                    <p className="margin-top-10">Web app that allow users to create their own resume websites using only Google Sheets, for free.</p>
+                                    <a href="https://browsr.io" role="button" className="btn btn-outline-info" target="_blank">Visit Website</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    {/* <!-- End Card 4 --> */}
                 </div>
             </div>
-        </div>
-    ); 
+        ); 
+    }
 }
-
-export default projects;
