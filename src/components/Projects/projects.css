@@ -10,10 +10,11 @@
     transition: 1s;
 }
 
-.visible {
+.visible-projects {
     opacity: 1 !important;
-    transition: 1s;
-    margin-top: 20px !important;
+    transform: (-10px, 0px);
+    transition: transform 0.8s;
+    /* margin-top: 20px !important; */
 }
 
 .image-wrap {

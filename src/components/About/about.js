@@ -1,7 +1,9 @@
 import React from 'react';
 import './about.css';
 // import myAvatar from '../../images/myAvatar.png';
-import myAvatarChrome from '../../images/myAvatar-chrome.png';
+// import myAvatarChrome from '../../images/myAvatar-chrome.png';
+// import foamHandBitmoji from '../../images/giant-hand-bitmoji.png';
+import wavingBitmoji from '../../images/bitmoji-wave.png';
 import classNames from 'classnames';
 
 
@@ -54,7 +56,7 @@ export default class About extends React.Component {
                 <div className="container">
                     <div className="row" id="aboutContent">
                         <div id="aboutAvatar" className={classNames("col-md-5 col-sm-12 d-flex flex-wrap align-items-center padding-top-15 padding-bottom-15", {'avatar-visible': this.state.showAvatar})}>
-                            <img src={myAvatarChrome} className="mx-auto d-block" alt="myFace" />
+                            <img src={wavingBitmoji} className="mx-auto d-block" alt="myFace" />
                         </div>
                         <div id="aboutDescription" className={classNames("col-md-7 col-sm-12 padding-top-15 padding-bottom-15", {'text-center' : window.innerWidth < 768, 'about-visible': this.state.showAbout})}>
                             <h1 className="display-5"><strong>Yo! My name is Kevin</strong></h1>
@@ -64,8 +66,8 @@ export default class About extends React.Component {
                                 functional web pages, turning one's imagination into reality.
                             </p>
                             <p className="lead">
-                                Aside from coding, I enjoy playing basketball, playing video/board games,
-                                rock climbing, and finding new shows to watch. Keep scrolling to see my
+                                Aside from being a developer, I enjoy playing basketball, 
+                                video/board games, rock climbing, and hiking. Keep scrolling to see my
                                 skills and more!
                             </p>
                         </div>

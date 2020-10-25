@@ -38,15 +38,15 @@ export default class Experince extends React.Component {
         const expUCSC = document.getElementById('expUCSC');
 
         let titleInView = (this.state.scrollHeight + window.innerHeight) > expTitle.offsetTop + 200,
-            titleBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expTitle.offsetTop + expTitle.clientHeight - 150),
+            titleBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expTitle.offsetTop + expTitle.clientHeight - 50),
             murjInView = (this.state.scrollHeight + window.innerHeight) > expMurj.offsetTop + 200,
-            murjBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expMurj.offsetTop + expMurj.clientHeight - 150),
+            murjBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expMurj.offsetTop + expMurj.clientHeight - 50),
             acsInView = (this.state.scrollHeight + window.innerHeight) > expACS.offsetTop + 200,
-            acsBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expACS.offsetTop + expACS.clientHeight - 150),
+            acsBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expACS.offsetTop + expACS.clientHeight - 50),
             wtInView = (this.state.scrollHeight + window.innerHeight) > expWT.offsetTop + 200,
-            wtBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expWT.offsetTop + expWT.clientHeight - 150),
+            wtBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expWT.offsetTop + expWT.clientHeight - 50),
             ucscInView = (this.state.scrollHeight + window.innerHeight) > expUCSC.offsetTop + 200,
-            ucscBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expUCSC.offsetTop + expUCSC.clientHeight - 150);
+            ucscBotInView = (this.state.scrollHeight + window.innerHeight) < (window.innerHeight + expUCSC.offsetTop + expUCSC.clientHeight - 50);
 
         if ( (titleInView && titleBotInView) ) {
             this.setState({ showExpTitle: true });
@@ -84,7 +84,7 @@ export default class Experince extends React.Component {
         return (
             <div className="experience bg-secondary" id="experience">
                 <div className="container">
-                    <div className={classNames("row", {'visible': this.state.showExpTitle})} id="expTitle">
+                    <div className={classNames("row", {'visible-title': this.state.showExpTitle})} id="expTitle">
                         <div className="col-12 text-center">
                             <h1 className="display-3"><strong>Experience</strong></h1>
                         </div>
