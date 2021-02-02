@@ -1,60 +1,91 @@
 #projects {
     /* background-image: linear-gradient(#5ED0A5, #3EAAA2); */
     padding: 45px 0px 150px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #dde1ed;
+}
+#pTitle {
+    opacity: 0;
+    transition: 0.8s;
 }
 
-#pTitle, #acs, #sankey, #tt, #tss, #browsr {
-    opacity: 0;
-    transition: 1s;
+#pTitle {
+    margin-bottom: 50px;
 }
 
 .visible-projects {
     opacity: 1 !important;
     transform: (-10px, 0px);
     transition: transform 0.8s;
-    /* margin-top: 20px !important; */
+    margin-top: 20px !important;
 }
 
-.image-wrap {
-    position: relative;
-    width: 300px;
-    height: 193px;
-    margin-top: 30px;
-}
-
-.projectDescription {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(223deg, rgba(32,32,32,1) 0%, rgba(105,105,105,0.9500175070028011) 53%, rgba(32,32,32,1) 100%);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-
-    /* transition effect. not necessary */
-    transition: opacity .3s;
-}
-
-.margin-top-10 {
+.margin-v-10 {
     margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
-img:hover + .projectDescription, .projectDescription:hover {
-    width: 300px;
-    height: 194px;
-    visibility: visible;
-    opacity: 1;
+.skill {
+    width: 20px !important;
+    height: auto;
+}
+
+#projects .project-card {
+    border: 1px solid #333;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    box-shadow: 4px 4px 40px 10px rgba(0, 0, 0, 0.2), -1em -1em 40px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 30px 5px !important;
+    background-color: #475466 !important;
+}
+
+@media screen and (min-width: 769px) {
+    .secondColumn {
+        margin-top: 150px;
+    }
+}
+
+#projects .project-title {
+    margin-top: 10px;
+}
+
+#projects .project-description {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 14px !important;
 }
 
 #projects img {
-    width: 300px !important;
-    height: 193px !important;
+    width: 100%;
+    height: auto !important;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#projects img.skill {
+    width: 25px !important;
+    height: auto;
+    padding-right: 5px !important;
+    padding-bottom: 10px !important;
+}
+
+#projects a {
+    color: #DCDCDC !important;
 }
 
 .margin-top-30 {
     margin-top: 30px !important;
+}
+
+.bg-mystic {
+    background-color: #dde1ed !important;
+}
+
+.bg-riverbed {
+    background-color: #475466 !important;
+}
+
+.bg-swirl {
+    background-color: #d2c9c3 !important;
 }

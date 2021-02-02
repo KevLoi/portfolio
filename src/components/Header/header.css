@@ -20,6 +20,15 @@
 
 .row.justify-content-start {
     padding: 150px 0px;
-    font-family: "Courier New", Monospace;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
+}
+
+.header a {
+    transition: 0.5s !important;
+}
+
+.header a:hover {
+    font-size: 20px;
+    transition: 0.5s;
 }

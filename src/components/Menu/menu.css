@@ -1,3 +1,83 @@
 #menu Button:focus {
     outline: none !important;
 }
+
+#menu {
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    z-index: 999;
+    will-change: transform;
+}
+
+.menu-circle {
+    position: relative;
+    background-color: #dde1ed;
+    margin: 0px 10px 10px;
+    padding: 2px 1px 0px 1px;
+    /* box-shadow: 0px 2px 15px #000000; */
+}
+
+.circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #dde1ed;
+    background-color: #dde1ed;
+    margin: 0px 0px 0px 15px;
+    padding: 4px 1px 0px 1px;
+    /* box-shadow: 0px 2px 15px #000000; */
+    transition: 0.3s;
+}
+
+.circle:hover {
+    cursor: pointer;
+    margin: 0px 0px 0px 15px;
+}
+
+.line {
+    height: 20px;
+    width: 2px;
+    background: #dde1ed;
+    color: #dde1ed;
+    margin-left: 34px;
+}
+
+.active .circle {
+    background-color: #475466 !important;
+    color: #dde1ed !important;
+    /* box-shadow: 0px 2px 15px #000000; */
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px !important;
+    padding: 8px 1px 0px 1px;
+    transition: 0.8s;
+}
+
+.no-display {
+    display: none;
+}
+
+.opacity-0 {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.menu-content {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.bg-mystic {
+    background-color: #dde1ed !important;
+}
+
+.bg-riverbed {
+    background-color: #475466 !important;
+}
+
+.bg-swirl {
+    background-color: #d2c9c3 !important;
+}

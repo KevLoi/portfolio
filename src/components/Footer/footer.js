@@ -21,21 +21,21 @@ const footer = () => {
                 </div>
                 <div className="row d-flex justify-content-around footer-content">
                     <div className="col text-center" id="link">
-                        <Tooltip title="Github" placement="top" arrow>
+                        <Tooltip title="Github" placement="top" >
                             <Fab color="inherit" className="fa-icon" href="https://github.com/kevloi">
                                 <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'github-alt']} size="2x" />
                             </Fab> 
                         </Tooltip>
                     </div>
                     <div className="col text-center" id="link">
-                        <Tooltip title="LinkedIn" placement="top" arrow>
+                        <Tooltip title="LinkedIn" placement="top" >
                             <Fab color="inherit" className="fa-icon" href="https://www.linkedin.com/in/kevin-loi/">
                                 <FontAwesomeIcon style={{color: 'black'}} icon={['fab', 'linkedin-in']} size="2x" />
                             </Fab> 
                         </Tooltip>
                     </div>
                     <div className="col text-center" id="link">
-                        <Tooltip title="Resumé" placement="top" arrow>
+                        <Tooltip title="Resumé" placement="top" >
                             <Fab color="inherit" className="fa-icon" href={Resume} target="_blank">
                                 <FontAwesomeIcon style={{color: 'black'}} icon={['fas', 'file-alt']} size="2x" />
                             </Fab> 

@@ -50,48 +50,56 @@ export default class Experince extends React.Component {
 
         if ( (titleInView && titleBotInView) ) {
             this.setState({ showExpTitle: true });
-        } else {
-            this.setState({ showExpTitle: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showExpTitle: false });
+        // }
 
         if ( (murjInView && murjBotInView) ) {
             this.setState({ showExpMurj: true });
-        } else {
-            this.setState({ showExpMurj: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showExpMurj: false });
+        // }
 
         if ( (acsInView && acsBotInView) ) {
             this.setState({ showExpACS: true });
-        } else {
-            this.setState({ showExpACS: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showExpACS: false });
+        // }
 
         if ( (wtInView && wtBotInView) ) {
             this.setState({ showExpWT: true });
-        } else {
-            this.setState({ showExpWT: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showExpWT: false });
+        // }
 
         if ( (ucscInView && ucscBotInView) ) {
             this.setState({ showExpUCSC: true });
-        } else {
-            this.setState({ showExpUCSC: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showExpUCSC: false });
+        // }
     }
 
 
     render() {
         return (
-            <div className="experience bg-secondary" id="experience">
-                <div className="container">
-                    <div className={classNames("row", {'visible-title': this.state.showExpTitle})} id="expTitle">
-                        <div className="col-12 text-center">
+            <div className="experience bg-dark" id="experience">
+                <div className="container-fluid">
+                    <div className={classNames("row justify-content-center exp-header", {'visible-title': this.state.showExpTitle})} id="expTitle">
+                        <div className="col-8 text-center padding-v-20 exp-header-content">
                             <h1 className="display-3"><strong>Experience</strong></h1>
+                            <p className="lead">Contributions to each company</p>
                         </div>
                     </div>
-                    <div className={classNames("card bg-transparent shadow murj", {'visible': this.state.showExpMurj})} id="expMurj">
+                </div>
+                <div className="container exp-content">
+                    <div className={classNames("card bg-riverbed exp-box-shadow murj", {'visible': this.state.showExpMurj})} id="expMurj">
                         <div className="card-body">
-                            <div className="row">
+                            <div className="row" style={{padding: '15px 0px'}}>
                                 <div className="col-md-3 col-sm-12 text-center my-auto">
                                     <img src={Murj} alt="Murj" />
                                     <p>Developer<br />DEC 2018 - Present</p>
@@ -100,18 +108,18 @@ export default class Experince extends React.Component {
                                     <ul>
                                         <li>Updated and implemented new features to the frontend in a timely manner, improving overall user experience</li>
                                         <li>Developed wireframes for multiple applications, creating new business opportunities for the company</li>
-                                        <li>Used Tableau to create and manage a variety of graphs, improving data visualization for users</li>
+                                        <li>Learned Tableau to create and manage a variety of graphs, improving data visualization and analytics for users</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className={classNames("card bg-transparent shadow ameritech", {'visible': this.state.showExpACS})} id="expACS">
+                    <div className={classNames("card bg-riverbed exp-box-shadow ameritech", {'visible': this.state.showExpACS})} id="expACS">
                         <div className="card-body">
-                            <div className="row">
+                            <div className="row" style={{padding: '20px 0px'}}>
                                 <div className="col-md-3 col-sm-12 text-center my-auto">
                                     <img src={Ameritech} alt="Ameritech" />
-                                    <p >IT Solutions Assistant<br />JUN - SEPT 2018</p>
+                                    <p style={{paddingTop: '10px'}}>IT Solutions Assistant<br />JUN - SEPT 2018</p>
                                 </div>
                                 <div className="col-md-9 col-sm-12 my-auto">
                                     <ul>
@@ -124,7 +132,7 @@ export default class Experince extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className={classNames("card bg-transparent shadow walkthru", {'visible': this.state.showExpWT})} id="expWT">
+                    <div className={classNames("card bg-riverbed exp-box-shadow walkthru", {'visible': this.state.showExpWT})} id="expWT">
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-md-3 col-sm-12 text-center my-auto">
@@ -141,7 +149,7 @@ export default class Experince extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className={classNames("card bg-transparent shadow orientation", {'visible': this.state.showExpUCSC})} id="expUCSC">
+                    <div className={classNames("card bg-riverbed exp-box-shadow orientation", {'visible': this.state.showExpUCSC})} id="expUCSC">
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-md-3 col-sm-12 text-center my-auto">

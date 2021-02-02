@@ -7,9 +7,9 @@
 
 #about {
     /* background-image: linear-gradient(#2E408C, #496AA4); */
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    padding: 70px 0px 220px;
+    font-family: 'Montserrat', sans-serif;
+    color: #dde1ed !important;
+    padding: 70px 0px 135px;
 }
 
 #aboutAvatar {
@@ -45,3 +45,4 @@
 .padding-bot-15 {
     padding-bottom: 15px !important;
 }
+

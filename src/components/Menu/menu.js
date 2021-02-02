@@ -1,92 +1,83 @@
 import React from 'react';
 import './menu.css';
-// import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Fab from '@material-ui/core/Fab';
-import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
-
-const style = theme => ({
-    fab: {
-        margin: 0,
-        top: 30,
-        left: 'auto',
-        bottom: 'auto',
-        right: 30,
-        position: 'fixed',
-        zIndex: '1000'
-    }
-});
+import Tooltip from '@material-ui/core/Tooltip';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
+import WorkIcon from '@material-ui/icons/Work';
+import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
+// import MailIcon from '@material-ui/icons/Mail';
+import { Spin as Hamburger } from 'hamburger-react';
+import classNames from 'classnames';
 
 class SimpleMenu extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            anchorEl: false,
-            scrollOptions: {
-                duration: 1000,
-                smooth: true
-            }
-        };
+        this.state = {isMenuOpen: false};
     }
 
-    handleClick = event => {
-        this.setState({ anchorEl: event.currentTarget });
-    };
-
-    handleClose = () => {
-        this.setState({ anchorEl: null });
-    };
-
     render() {
-        const { anchorEl } = this.state;
-
-        const {classes} = this.props;
 
         return (
-            <div className="menu" id="menu">
-                {/* <Tooltip title="Click words in menu" placement="left" enterDelay={50} leaveDelay={100}> */}
-                    <Fab
-                        aria-owns={anchorEl ? 'simple-menu' : undefined}
-                        aria-haspopup="true"
-                        onClick={this.handleClick}
-                        className={classes.fab}
-                    >
-                        <FontAwesomeIcon style={{color: 'black'}} icon={['fas', 'bars']} size="2x" />
-                    </Fab>
-                {/* </Tooltip> */}
-                <Menu
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    open={Boolean(anchorEl)}
-                    onClose={this.handleClose}
-                    style={{zIndex: '1001'}}
-                >
-                    <MenuItem>
-                        <Link to="header" onClick={this.handleClose} {...this.state.scrollOptions}>Top</Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to="about" onClick={this.handleClose} {...this.state.scrollOptions}>About</Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to="experience" onClick={this.handleClose} {...this.state.scrollOptions}>Experience</Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to="projects" onClick={this.handleClose} {...this.state.scrollOptions}>Projects</Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to="skills" onClick={this.handleClose} {...this.state.scrollOptions}>Skills</Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to="footer" onClick={this.handleClose} {...this.state.scrollOptions}>More</Link>
-                    </MenuItem>
-                </Menu>
+            <div id="menu">
+                <div className="test">
+                    <div className="menu rounded-circle menu-circle">
+                        <Hamburger rounded size={20} onToggle={() => this.setState({isMenuOpen: !this.state.isMenuOpen})} />
+                    </div>
+                    <div className={classNames({"opacity-0" : !this.state.isMenuOpen, "menu-content" : this.state.isMenuOpen})}>
+                        <Tooltip title="Home" placement="right" >
+                            <Link activeClass="active" to="header" spy={true} smooth={true}>
+                                <div className="rounded-circle circle text-center">
+                                    <HomeIcon />
+                                </div>
+                            </Link>
+                        </Tooltip>
+
+                        <div className="line"></div>
+
+                        <Tooltip title="About" placement="right" >
+                            <Link activeClass="active" to="about" spy={true} smooth={true}>
+                                <div className="rounded-circle circle text-center">
+                                    <PersonIcon />
+                                </div>
+                            </Link>
+                        </Tooltip>
+
+                        <div className="line"></div>
+
+                        <Tooltip title="Experience" placement="right" >
+                            <Link activeClass="active" to="experience" spy={true} smooth={true}>
+                                <div className="rounded-circle circle text-center">
+                                    <WorkIcon />
+                                </div>
+                            </Link>
+                        </Tooltip>
+
+                        <div className="line"></div>
+
+                        <Tooltip title="Projects" placement="right" >
+                            <Link activeClass="active" to="projects" spy={true} smooth={true}>
+                                <div className="rounded-circle circle text-center">
+                                    <CollectionsBookmarkIcon />
+                                </div>
+                            </Link>
+                        </Tooltip>
+
+                        {/* <div className="line"></div>
+
+                        <Tooltip title="Contact" placement="right" >
+                            <Link activeClass="active" to="footer" spy={true} smooth={true}>
+                                <div className="rounded-circle circle text-center">
+                                    <MailIcon />
+                                </div>
+                            </Link>
+                        </Tooltip> */}
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
-export default withStyles(style)(SimpleMenu);
+export default SimpleMenu;

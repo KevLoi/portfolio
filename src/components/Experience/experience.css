@@ -1,9 +1,9 @@
 #experience {
     /* background-image: linear-gradient(#496AA4, #5ED0A5); */
-    padding: 35px 0px;
+    padding: 0px 0px 35px 0px;
     z-index: 2;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #dde1ed !important;
 }
 
 /* .experience h1 {
@@ -11,7 +11,23 @@
 } */
 
 .experience .card {
-    margin: 20px 0px;
+    border-radius: 3em !important;
+    margin: 20px 0px 35px;
+}
+
+.exp-header {
+    /* background-color: #475466; */
+    /* color: #343a40 !important; */
+    /* text-shadow: 1px 1px 2px #475466 !important; */
+}
+
+.exp-header-content {
+    /* background-color: #333; */
+    padding-bottom: 170px !important;
+}
+
+.exp-content {
+    margin-top: -150px !important;
 }
 
 .experience img {
@@ -19,16 +35,18 @@
     width: 175px;
 }
 
-.card {
-    border: 0px !important;
+#expUCSC img {
+    height: auto;
+    width: 150px !important;
 }
+
+/* .card {
+    border-radius: 3em !important;
+    margin-bototm: 
+} */
 
 .card-body {
     padding: 1rem !important;
-}
-
-.card.bg-dark {
-    color: white !important;
 }
 
 .col-md-3 {
@@ -59,4 +77,35 @@
     transform: translate(50px, 0px);
     transition: transform 0.8s ease-in-out;
     /* transition-timing-function: ease; */
+}
+
+.exp-box-shadow {
+    box-shadow: 4px 4px 40px 10px rgba(0, 0, 0, 0.2), -1em -1em 40px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+.bg-mystic {
+    background-color: #dde1ed !important;
+}
+
+.bg-riverbed {
+    background-color: #475466 !important;
+}
+
+.bg-swirl {
+    background-color: #d2c9c3 !important;
+}
+
+.blur {
+    backdrop-filter: grayscale(0.5) opacity(0.8)
+}
+
+.bg-glass {
+    background: rgb(255, 255, 255, 0.2) !important;
+    border-radius: 3em !important;
+    border: 2px solid transparent !important;
+    
+}
+
+.padding-v-20 {
+    padding: 20px 0px;
 }

@@ -58,14 +58,14 @@ export default class Skills extends React.Component {
 
     render() {
         return (
-            <div className="skills bg-secondary" id="skills">
+            <div className="skills bg-dark" id="skills">
                 <div className="container">
                     <Fade in={this.state.showSkills} timeout={1000}>
-                        <Paper elevation={8} className="skills-section bg-secondary" id="skillsContent">
+                        <Paper elevation={10} className="skills-section bg-riverbed" id="skillsContent">
                             <div className="row">
                                 <div className={classNames("col-md-3 col-sm-12 frontEnd text-center padding-bottom-30", {'bottom-border': this.props.innerWidth < 768})}>
                                     <div className="skills-header">
-                                        <FontAwesomeIcon style={{color: 'white'}} icon={['fas', 'file-code']} size="4x" />
+                                        <FontAwesomeIcon style={{color: '#dde1ed'}} icon={['fas', 'file-code']} size="4x" />
                                         <h3>Frontend</h3>
                                     </div>
                                     <div className="row skills-content">
@@ -93,7 +93,7 @@ export default class Skills extends React.Component {
                                 </div>
                                 <div className={classNames("col-md-3 col-sm-12 javaScript text-center padding-bottom-30", {'bottom-border': this.props.innerWidth < 768})}>
                                     <div className="skills-header">
-                                        <FontAwesomeIcon style={{color: 'white'}} icon={['fab', 'js-square']} size="4x" />
+                                        <FontAwesomeIcon style={{color: '#dde1ed'}} icon={['fab', 'js-square']} size="4x" />
                                         <h3>JavaScript</h3>
                                     </div>
                                     <div className="row skills-content">
@@ -125,7 +125,7 @@ export default class Skills extends React.Component {
                                 </div>
                                 <div className={classNames("col-md-3 col-sm-12 backEnd text-center padding-bottom-30", {'bottom-border': this.props.innerWidth < 768})}>
                                     <div className="skills-header">
-                                        <FontAwesomeIcon style={{color: 'white'}} icon={['fas', 'terminal']} size="4x" />
+                                        <FontAwesomeIcon style={{color: '#dde1ed'}} icon={['fas', 'terminal']} size="4x" />
                                         <h3>Backend</h3>
                                     </div>
                                     <div className="row skills-content">
@@ -149,7 +149,7 @@ export default class Skills extends React.Component {
                                 </div>
                                 <div className={classNames("col-md-3 col-sm-12 other text-center padding-bottom-30", {'bottom-border': this.props.innerWidth < 768})}>
                                     <div className="skills-header">
-                                        <FontAwesomeIcon style={{color: 'white'}} icon={['fas', 'laptop']} size="4x" />
+                                        <FontAwesomeIcon style={{color: '#dde1ed'}} icon={['fas', 'laptop']} size="4x" />
                                         <h3>Other</h3>
                                     </div>
                                     <div className="row skills-content">

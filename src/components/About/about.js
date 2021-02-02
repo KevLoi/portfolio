@@ -3,7 +3,9 @@ import './about.css';
 // import myAvatar from '../../images/myAvatar.png';
 // import myAvatarChrome from '../../images/myAvatar-chrome.png';
 // import foamHandBitmoji from '../../images/giant-hand-bitmoji.png';
-import wavingBitmoji from '../../images/bitmoji-wave.png';
+// import wavingBitmoji from '../../images/bitmoji-wave.png';
+import tearingBitmoji from '../../images/bitmoji-tear.png';
+// import thinkingBitmoji from '../../images/bitmoji-think.png';
 import classNames from 'classnames';
 
 
@@ -39,15 +41,17 @@ export default class About extends React.Component {
 
         if ( (avatarTopInView && avatarBotInView) ) {
             this.setState({ showAvatar: true });
-        } else {
-            this.setState({ showAvatar: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showAvatar: false });
+        // }
 
         if ( (dTopInView && dBotInView) ) {
             this.setState({ showAbout: true });
-        } else {
-            this.setState({ showAbout: false });
-        }
+        } 
+        // else {
+        //     this.setState({ showAbout: false });
+        // }
     }
 
     render() {
@@ -56,10 +60,10 @@ export default class About extends React.Component {
                 <div className="container">
                     <div className="row" id="aboutContent">
                         <div id="aboutAvatar" className={classNames("col-md-5 col-sm-12 d-flex flex-wrap align-items-center padding-top-15 padding-bottom-15", {'avatar-visible': this.state.showAvatar})}>
-                            <img src={wavingBitmoji} className="mx-auto d-block" alt="myFace" />
+                            <img src={tearingBitmoji} className="mx-auto d-block" alt="myFace" />
                         </div>
                         <div id="aboutDescription" className={classNames("col-md-7 col-sm-12 padding-top-15 padding-bottom-15", {'text-center' : window.innerWidth < 768, 'about-visible': this.state.showAbout})}>
-                            <h1 className="display-5"><strong>Yo! My name is Kevin</strong></h1>
+                            <h1 className="display-4 padding-bottom-15" style={{marginLeft: '-5px'}}><strong>Yo! My name is Kevin</strong></h1>
                             <p className="lead">
                                 I am a frontend developer 
                                 from Santa Cruz, CA. My passion is to develop elegant and 
@@ -67,8 +71,8 @@ export default class About extends React.Component {
                             </p>
                             <p className="lead">
                                 Aside from being a developer, I enjoy playing basketball, 
-                                video/board games, rock climbing, and hiking. Keep scrolling to see my
-                                skills and more!
+                                video/board games, rock climbing, and hiking. Keep scrolling to see 
+                                what I have done!
                             </p>
                         </div>
                     </div>
