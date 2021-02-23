@@ -1,15 +1,16 @@
 import acsSite from '../../images/acsSite.png';
 import sankey from '../../images/sankeyDiagram.png';
 import tipsyTrials from '../../images/tipsyTrials.png';
-import starvingslug from '../../images/starvingSlug.png';
+import starvingslug from '../../images/StarvingSlug.png';
 import browsr from '../../images/browsr.png';
 import friend from '../../images/junSite.png';
+import spotify from '../../images/Spotify.png';
 
 import html from '../../images/Logos/HTML.png';
 import css from '../../images/Logos/CSS.png';
 // import jsx from '../../images/Logos/JSX.png';
 import bootstrap from '../../images/Logos/Bootstrap.png';
-// import mui from '../../images/Logos/MaterialUI.png';
+import mui from '../../images/Logos/MaterialUI.png';
 import javascript from '../../images/Logos/JavaScript.png';
 import react from '../../images/Logos/ReactJS.png';
 import angular from '../../images/Logos/AngularJS.png';
@@ -29,6 +30,21 @@ import swift from '../../images/Logos/Swift.png';
 import firebase from '../../images/Logos/Firebase.png';
 
 export const columnOneProjects = {
+    spotProject: {
+        title: 'Spotify',
+        image: spotify,
+        description: "React web application with NodeJS server that allow users to search for songs and artists using Spotify's API. Users can also toggle songs to play",
+        link: 'https://github.com/KevLoi/spotify',
+        projectSkills: {
+            html: html,
+            css: css,
+            bootstrap: bootstrap,
+            javascript: javascript,
+            react: react,
+            mui: mui,
+            node: node,
+        }
+    },
     browsrProject: {
         title: 'Browsr',
         image: browsr,
@@ -66,7 +82,8 @@ export const columnOneProjects = {
             javascript: javascript,
             react: react,
         }
-    }
+    },
+
 }
 
 export const columnTwoProjects = {
