@@ -41,7 +41,7 @@ export default class Projects extends React.Component {
                 return (
                     <Fragment key={ndx}>
                         <div className="project-card">
-                            <img className="projectImage" src={columnOneProjects[project].image} className="mx-auto" alt={columnOneProjects[project].title} />
+                            <img className="projectImage mx-auto" src={columnOneProjects[project].image} alt={columnOneProjects[project].title} />
                             <div className="mx-auto project-description">
                                 <h4 className="project-title">{columnOneProjects[project].title}</h4>
                                 <p className="margin-v-10">{columnOneProjects[project].description}</p>
@@ -72,7 +72,7 @@ export default class Projects extends React.Component {
                 return (
                     <Fragment key={ndx}>
                         <div className="project-card">
-                            <img className="projectImage" src={columnTwoProjects[project].image} className="mx-auto" alt={columnTwoProjects[project].title} />
+                            <img className="projectImage mx-auto" src={columnTwoProjects[project].image} alt={columnTwoProjects[project].title} />
                             <div className="mx-auto project-description">
                                 <h4 className="project-title">{columnTwoProjects[project].title}</h4>
                                 <p className="margin-v-10">{columnTwoProjects[project].description}</p>

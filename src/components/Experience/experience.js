@@ -106,9 +106,11 @@ export default class Experince extends React.Component {
                                 </div>
                                 <div className="col-md-9 col-sm-12 my-auto">
                                     <ul>
-                                        <li>Updated and implemented new features to the frontend in a timely manner, improving overall user experience</li>
-                                        <li>Developed wireframes for multiple applications, creating new business opportunities for the company</li>
-                                        <li>Learned Tableau to create and manage a variety of graphs, improving data visualization and analytics for users</li>
+                                        <li>Resolved JIRA tickets by pushing changes to Git concerning front-end changes in React</li>
+                                        <li>Implemented new and updated features to the front-end in a timely manner using React, improving overall user experience</li>
+                                        <li>Practiced agile scrum methodologies with a product manager and a team of engineers</li>
+                                        <li>Collaborated with designer to develop wireframes for applications, opening up new opportunities for the company</li>
+                                        <li>Quickly learned and used Tableau to create and improve visualization for Murj data analytics</li>
                                     </ul>
                                 </div>
                             </div>

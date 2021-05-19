@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/home';
+import Work from './components/Work/work';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +18,16 @@ library.add(faLaptop, faTerminal, faJsSquare, faFileCode, faGithubAlt, faLinkedi
 class App extends Component {
   render() {
     return (
-      <Home />
+      <div className="App">
+        <Router>
+          <div>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/murj" component={Work} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
     );
   }
 }

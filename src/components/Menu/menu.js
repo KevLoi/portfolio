@@ -6,7 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import WorkIcon from '@material-ui/icons/Work';
 import CollectionsBookmarkIcon from '@material-ui/icons/CollectionsBookmark';
-// import MailIcon from '@material-ui/icons/Mail';
+import MailIcon from '@material-ui/icons/Mail';
 import { Spin as Hamburger } from 'hamburger-react';
 import classNames from 'classnames';
 
@@ -64,15 +64,15 @@ class SimpleMenu extends React.Component {
                             </Link>
                         </Tooltip>
 
-                        {/* <div className="line"></div>
+                        <div className="line"></div>
 
                         <Tooltip title="Contact" placement="right" >
-                            <Link activeClass="active" to="footer" spy={true} smooth={true}>
+                            <Link activeClass="active" to="/work">
                                 <div className="rounded-circle circle text-center">
                                     <MailIcon />
                                 </div>
                             </Link>
-                        </Tooltip> */}
+                        </Tooltip>
                     </div>
                 </div>
             </div>
